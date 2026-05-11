@@ -1,4 +1,17 @@
-.import/
+# Godot 4
 .godot/
+.import/
+
+# Project files
+project.godot
 export_presets.cfg
-*.translation
+
+# Imported files
+*.import
+
+# Mono
+.mono/
+
+# OS
+.DS_Store
+Thumbs.db

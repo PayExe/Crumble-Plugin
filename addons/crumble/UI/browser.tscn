@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c1ovmqkxauusr"]
+
+[ext_resource type="Script" uid="uid://bvyivawjrb2pi" path="res://addons/crumble/UI/browser.gd" id="1_tbbv4"]
+
+[node name="Browser" type="VBoxContainer" unique_id=268115649]
+script = ExtResource("1_tbbv4")
+
+[node name="OptionButton" type="OptionButton" parent="." unique_id=1072642048]
+layout_mode = 2
+
+[node name="ItemList" type="ItemList" parent="." unique_id=1765175374]
+layout_mode = 2
+item_count = 1
+
+[node name="Button" type="Button" parent="." unique_id=2111519028]
+layout_mode = 2
+text = "Apply"

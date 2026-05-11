@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://moyfo725u8tg"]
 
 [ext_resource type="Texture2D" uid="uid://csvgl451uyh8x" path="res://addons/crumble/UI/image/test.jpg" id="1_jojr4"]
+[ext_resource type="Script" uid="uid://cvnyx5wy1614o" path="res://addons/crumble/UI/TextureButton.gd" id="2_osgqf"]
 
 [node name="Crumble" type="Control" unique_id=2025852517]
 layout_mode = 3
@@ -16,3 +17,4 @@ offset_right = 50.0
 offset_bottom = 749.0
 texture_normal = ExtResource("1_jojr4")
 ignore_texture_size = true
+script = ExtResource("2_osgqf")

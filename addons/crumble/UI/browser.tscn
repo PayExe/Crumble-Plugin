@@ -2,13 +2,16 @@
 
 [ext_resource type="Script" uid="uid://bvyivawjrb2pi" path="res://addons/crumble/UI/browser.gd" id="1_tbbv4"]
 
-[node name="Browser" type="VBoxContainer" unique_id=268115649]
+[node name="Browser" type="VBoxContainer" unique_id=126357158]
+offset_right = 95.0
+offset_bottom = 219.0
 script = ExtResource("1_tbbv4")
 
 [node name="OptionButton" type="OptionButton" parent="." unique_id=1072642048]
 layout_mode = 2
 
 [node name="ItemList" type="ItemList" parent="." unique_id=1765175374]
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 item_count = 1
 

@@ -1,6 +1,4 @@
-.project
-.import
-.godot
-scenes de test
-assets inutiles
-exports
+.import/
+.godot/
+export_presets.cfg
+*.translation

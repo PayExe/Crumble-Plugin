@@ -4,7 +4,7 @@ extends VBoxContainer
 var selected_node = null
 
 var dictionnaire = {
-	"PSX": ["Vertex Wobble", "Dithering", "Scanlines", "Affine Warping"],
+	"PSX": ["Dithering", "Scanlines", "CRT warp", "Chromatic aberration", "VHS noise", "Flicker", "Vignette"],
 	"Horror": ["Shader3"],
 	"Sci-Fi": ["Shader4"]
 }
@@ -22,15 +22,24 @@ var shader_path = {
 var editor_settings = EditorInterface.get_editor_settings()
 
 func _ready() -> void:
+	$OptionButton.clear()
+	$SceneButton.clear()
+	
 	$OptionButton.add_item("PSX")
 	$OptionButton.add_item("Horror")
 	$OptionButton.add_item("Sci-Fi")
 	$OptionButton.item_selected.connect(update_list)
+	
+	for scene_path in EditorInterface.get_open_scenes():
+		$SceneButton.add_item(scene_path.get_file())
+	
 	$Button.pressed.connect(apply_button)
 	EditorInterface.get_selection().selection_changed.connect(update_selected_node)
 	$ItemList.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	update_list(0)
-
+	
+	print(EditorInterface.get_open_scenes())
+	
 func update_list(index: int) -> void:
 	$ItemList.clear()
 	var categorie = $OptionButton.get_item_text(index)
@@ -54,3 +63,9 @@ func update_selected_node() -> void:
 	var nodes = EditorInterface.get_selection().get_selected_nodes()
 	if nodes.size() > 0:
 		selected_node = nodes[0]
+
+func get_scene(node) -> void:
+	var root = EditorInterface.get_edited_scene_root()
+	for elt in root.get_children():
+		get_scene(elt)
+		print(elt.name)

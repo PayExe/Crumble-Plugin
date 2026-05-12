@@ -7,10 +7,13 @@ offset_right = 95.0
 offset_bottom = 219.0
 script = ExtResource("1_tbbv4")
 
+[node name="SceneButton" type="OptionButton" parent="." unique_id=108348244]
+layout_mode = 2
+
 [node name="OptionButton" type="OptionButton" parent="." unique_id=1072642048]
 layout_mode = 2
 selected = 0
-item_count = 6
+item_count = 10
 popup/item_0/text = "PSX"
 popup/item_0/id = 0
 popup/item_1/text = "Horror"
@@ -23,16 +26,27 @@ popup/item_4/text = "Horror"
 popup/item_4/id = 4
 popup/item_5/text = "Sci-Fi"
 popup/item_5/id = 5
+popup/item_6/text = "Scene"
+popup/item_6/id = 6
+popup/item_7/text = "PSX"
+popup/item_7/id = 7
+popup/item_8/text = "Horror"
+popup/item_8/id = 8
+popup/item_9/text = "Sci-Fi"
+popup/item_9/id = 9
 
 [node name="ItemList" type="ItemList" parent="." unique_id=1765175374]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_vertical = 3
-item_count = 4
-item_0/text = "Vertex Wobble"
-item_1/text = "Dithering"
-item_2/text = "Scanlines"
-item_3/text = "Affine Warping"
+item_count = 7
+item_0/text = "Dithering"
+item_1/text = "Scanlines"
+item_2/text = "CRT warp"
+item_3/text = "Chromatic aberration"
+item_4/text = "VHS noise"
+item_5/text = "Flicker"
+item_6/text = "Vignette"
 
 [node name="Button" type="Button" parent="." unique_id=2111519028]
 layout_mode = 2

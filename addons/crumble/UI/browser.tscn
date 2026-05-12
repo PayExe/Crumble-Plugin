@@ -35,6 +35,9 @@ popup/item_8/id = 8
 popup/item_9/text = "Sci-Fi"
 popup/item_9/id = 9
 
+[node name="NodeList" type="ItemList" parent="." unique_id=2090416732]
+layout_mode = 2
+
 [node name="ItemList" type="ItemList" parent="." unique_id=1765175374]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2

@@ -1,14 +1,10 @@
-shader_type spatial;
-
-void vertex() {
-	// Called for every vertex the material is visible on.
-}
+shader_type canvas_item;
+uniform bool scanlines = true;
+uniform float scanline_intensity : hint_range(0.0, 1.0) = 0.15;
 
 void fragment() {
-	// Called for every pixel the material is visible on.
+	    if (scanlines) {
+        float scan = sin(FRAGCOORD.y * 3.14159) * 0.5 + 0.5;
+        COLOR.rgb *= 1.0 - scanline_intensity * (1.0 - scan);
+    }
 }
-
-//void light() {
-//	// Called for every pixel for every light affecting the material.
-//	// Uncomment to replace the default light processing function with this one.
-//}

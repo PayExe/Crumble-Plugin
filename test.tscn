@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c57u0dlr205el"]
+
+[ext_resource type="Shader" uid="uid://bimvl1thuxeeh" path="res://addons/crumble/shaders/PSX/scanlines.gdshader" id="1_37kl0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8uh7m"]
+shader = ExtResource("1_37kl0")
+shader_parameter/scanlines = true
+shader_parameter/scanline_intensity = 0.15
+
+[node name="Test" type="Node2D" unique_id=1250765319]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=902414466]
+material = SubResource("ShaderMaterial_8uh7m")
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.94509804, 0.9882353, 0.827451, 1)

@@ -2,7 +2,7 @@
 extends VBoxContainer
 
 var dictionnaire = {
-	"PSX": ["Shader1", "Shader2"],
+	"PSX": ["Vertex Wobble", "Dithering", "Scanlines", "Affine Warping"],
 	"Horror": ["Shader3"],
 	"Sci-Fi": ["Shader4"]
 }

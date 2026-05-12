@@ -9,11 +9,22 @@ script = ExtResource("1_tbbv4")
 
 [node name="OptionButton" type="OptionButton" parent="." unique_id=1072642048]
 layout_mode = 2
+selected = 0
+item_count = 3
+popup/item_0/text = "PSX"
+popup/item_0/id = 0
+popup/item_1/text = "Horror"
+popup/item_1/id = 1
+popup/item_2/text = "Sci-Fi"
+popup/item_2/id = 2
 
 [node name="ItemList" type="ItemList" parent="." unique_id=1765175374]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
-item_count = 1
+size_flags_vertical = 3
+item_count = 2
+item_0/text = "Shader1"
+item_1/text = "Shader2"
 
 [node name="Button" type="Button" parent="." unique_id=2111519028]
 layout_mode = 2
